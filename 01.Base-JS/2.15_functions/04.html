@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--
+Напишите функцию pow(x,n), которая возвращает x в степени n. Иначе говоря, умножает x на себя n раз и возвращает результат.
+
+pow(3, 2) = 3 * 3 = 9
+pow(3, 3) = 3 * 3 * 3 = 27
+pow(1, 100) = 1 * 1 * ...* 1 = 1
+Создайте страницу, которая запрашивает x и n, а затем выводит результат pow(x,n).
+-->
+
+<script>
+    'use strict';
+
+    function pow(num, ext) {
+        let result = 1;
+
+        for (let i = 1; i <= ext; i++) {
+            result *= num;
+        }
+
+        return result;
+    }
+
+    let num = Number(prompt('Введите число'));
+    let ext = Number(prompt('Введите степень'));
+
+    alert(pow(num, ext));
+</script>
+</body>
+</html>
